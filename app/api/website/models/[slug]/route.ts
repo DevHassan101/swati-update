@@ -1,7 +1,7 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/app/lib/db";
 
-export async function GET(context: { params: Promise<{ slug: string }> }) {
+export async function GET(request: NextRequest, context: { params: Promise<{ slug: string }> }) {
   try {
     const { slug } = await context.params;
     const model = await prisma.model.findFirst({

@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import prisma from "../../../lib/db";
 import Link from 'next/link';
 
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -63,7 +64,7 @@ export default async function ModelDetailPage({ params }: Props) {
                 </div>
                 <p className="text-lg text-white/90">{model.model_location}</p>
               </div>
-              <Link href={`tel:${model.phone || '+923402690068'}`}
+              <Link href={`tel:${'+923402690068'}`}
                 className="bg-white py-2 px-8 border-2 border-red-500 rounded-full text-red-500 font-semibold flex items-center hover:bg-red-500 hover:text-white transition-all"
               >
                 <FiPhoneCall className="mr-2" /> Call Now

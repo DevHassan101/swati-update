@@ -17,7 +17,7 @@ export default function DashboardLayout({ children, user }: DashboardLayoutProps
       backgroundColor: '#f9fafb',
       minHeight: '100vh'
     }}>
-      <Sidebar />
+      <Sidebar isOpen={false} onClose={() => {}} />
       
       <div style={{
         marginLeft: '250px',
@@ -25,7 +25,7 @@ export default function DashboardLayout({ children, user }: DashboardLayoutProps
         display: 'flex',
         flexDirection: 'column'
       }}>
-        <Navbar user={user} />
+        <Navbar user={user} isSidebarOpen={false} onMenuClick={() => {}}  />
         
         <main style={{
           padding: '32px',

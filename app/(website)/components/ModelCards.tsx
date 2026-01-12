@@ -4,77 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsHearts } from "react-icons/bs";
 
-// const models = [
-//   {
-//     slug: "valeria",
-//     name: "Valeria",
-//     image: "/images/profile1.webp",
-//     rating: 4,
-//     location: "Available in Barking IG11, Outcall £130",
-//     badge: "Top 10",
-//   },
-//   {
-//     slug: "zaria",
-//     name: "Zaria",
-//     image: "/images/profile1.webp",
-//     rating: 4,
-//     location: "Available in Barking IG11 Outcall, N/A",
-//     badge: null,
-//   },
-//   {
-//     slug: "alexis",
-//     name: "Alexis",
-//     image: "/images/profile1.webp",
-//     rating: 5,
-//     location: "Available in London Escort, Outcall £150",
-//     badge: "Top 10",
-//   },
-//   {
-//     slug: "maria",
-//     name: "Maria",
-//     image: "/images/profile1.webp",
-//     rating: 4,
-//     location: "Available in Barking IG11, N/A",
-//     badge: null,
-//   },
-//   {
-//     slug: "valeria",
-//     name: "Valeria",
-//     image: "/images/profile1.webp",
-//     rating: 4,
-//     location: "Available in Barking IG11, Outcall £130",
-//     badge: "Top 10",
-//   },
-//   {
-//     slug: "zaria",
-//     name: "Zaria",
-//     image: "/images/profile1.webp",
-//     rating: 4,
-//     location: "Available in Barking IG11 Outcall, N/A",
-//     badge: null,
-//   },
-//   {
-//     slug: "alexis",
-//     name: "Alexis",
-//     image: "/images/profile1.webp",
-//     rating: 5,
-//     location: "Available in London Escort, Outcall £150",
-//     badge: "Top 10",
-//   },
-//   {
-//     slug: "maria",
-//     name: "Maria",
-//     image: "/images/profile1.webp",
-//     rating: 4,
-//     location: "Available in Barking IG11, N/A",
-//     badge: null,
-//   }
-// ];
-
+interface Model {
+  model_image: string;
+  model_name: string;
+  model_location: string;
+  model_age: number;
+  slug: string;
+  badge?: string;
+}
 
 export default function ModelCards() {
 
-  const [models, setModels] = useState([]);
+  const [models, setModels] = useState<Model[]>([]);
   const [openCard, setOpenCard] = useState<number | null>(null);
 
 
